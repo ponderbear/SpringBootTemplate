@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="1f1742f3-d2fc-4633-983e-c2e7d6d1e162" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="importAutomatically" value="true" />
+        <option name="vmOptionsForImporter" value="-Xmx768m" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1hrzLqWtdoV4Hn7zIxirLk1wHKM" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration name="HelloWorld" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="HelloWorld" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.HelloWorld" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f1742f3-d2fc-4633-983e-c2e7d6d1e162" name="Default Changelist" comment="" />
+      <created>1600783945406</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1600783945406</updated>
+      <workItem from="1600783949220" duration="3783000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="560" y="194" key="#Project_Structure" timestamp="1600784447106">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="560" y="194" key="#Project_Structure/0.23.1920.1012@0.23.1920.1012" timestamp="1600784447106" />
+    <state x="898" y="193" key="Maven.ArtifactSearchDialog" timestamp="1600789718099">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="898" y="193" key="Maven.ArtifactSearchDialog/0.23.1920.1012@0.23.1920.1012" timestamp="1600789718099" />
+    <state x="461" y="168" key="SettingsEditor" timestamp="1600784404380">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="461" y="168" key="SettingsEditor/0.23.1920.1012@0.23.1920.1012" timestamp="1600784404379" />
+    <state x="422" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1600783951182">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="422" y="303" key="com.intellij.ide.util.TipDialog/0.23.1920.1012@0.23.1920.1012" timestamp="1600783951182" />
+  </component>
+</project>
