@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="1f1742f3-d2fc-4633-983e-c2e7d6d1e162" name="Default Changelist" comment="" />
+    <list default="true" id="1f1742f3-d2fc-4633-983e-c2e7d6d1e162" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/HelloWorld.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/HelloWorld.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/contorller/RestControllerTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/contorller/RestControllerTest.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,6 +20,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,19 +32,25 @@
     </option>
   </component>
   <component name="ProjectId" id="1hrzLqWtdoV4Hn7zIxirLk1wHKM" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RequestMappingsPanelOrder0" value="0" />
+    <property name="RequestMappingsPanelOrder1" value="1" />
+    <property name="RequestMappingsPanelWidth0" value="75" />
+    <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.25125" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="configurable.group.tools" />
   </component>
   <component name="RunManager">
     <configuration name="HelloWorld" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
@@ -68,7 +83,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600783945406</updated>
-      <workItem from="1600783949220" duration="3783000" />
+      <workItem from="1600783949220" duration="7155000" />
     </task>
     <servers />
   </component>
@@ -80,17 +95,58 @@
       <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state x="560" y="194" key="#Project_Structure/0.23.1920.1012@0.23.1920.1012" timestamp="1600784447106" />
+    <state x="76" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1600860714414">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="76" y="131" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.23.1920.1012@0.23.1920.1012" timestamp="1600860714414" />
+    <state width="1878" height="372" key="GridCell.Tab.0.bottom" timestamp="1600862723057">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.0.bottom/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723057" />
+    <state width="1878" height="372" key="GridCell.Tab.0.center" timestamp="1600862723056">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.0.center/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723056" />
+    <state width="1878" height="372" key="GridCell.Tab.0.left" timestamp="1600862723056">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.0.left/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723056" />
+    <state width="1878" height="372" key="GridCell.Tab.0.right" timestamp="1600862723057">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.0.right/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723057" />
+    <state width="1878" height="372" key="GridCell.Tab.1.bottom" timestamp="1600862723058">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.1.bottom/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723058" />
+    <state width="1878" height="372" key="GridCell.Tab.1.center" timestamp="1600862723058">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.1.center/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723058" />
+    <state width="1878" height="372" key="GridCell.Tab.1.left" timestamp="1600862723058">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.1.left/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723058" />
+    <state width="1878" height="372" key="GridCell.Tab.1.right" timestamp="1600862723058">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
+    </state>
+    <state width="1878" height="372" key="GridCell.Tab.1.right/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862723058" />
     <state x="898" y="193" key="Maven.ArtifactSearchDialog" timestamp="1600789718099">
       <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state x="898" y="193" key="Maven.ArtifactSearchDialog/0.23.1920.1012@0.23.1920.1012" timestamp="1600789718099" />
-    <state x="461" y="168" key="SettingsEditor" timestamp="1600784404380">
-      <screen x="0" y="23" width="1920" height="1012" />
+    <state x="271" y="-906" key="SettingsEditor" timestamp="1600862657834">
+      <screen x="-190" y="-1057" width="1920" height="1057" />
     </state>
+    <state x="271" y="-906" key="SettingsEditor/-190.-1057.1920.1057/0.23.1536.892@-190.-1057.1920.1057" timestamp="1600862657834" />
     <state x="461" y="168" key="SettingsEditor/0.23.1920.1012@0.23.1920.1012" timestamp="1600784404379" />
     <state x="422" y="303" key="com.intellij.ide.util.TipDialog" timestamp="1600783951182">
       <screen x="0" y="23" width="1920" height="1012" />
     </state>
     <state x="422" y="303" key="com.intellij.ide.util.TipDialog/0.23.1920.1012@0.23.1920.1012" timestamp="1600783951182" />
+    <state x="743" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600862973531">
+      <screen x="0" y="23" width="1920" height="1012" />
+    </state>
+    <state x="743" y="453" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1920.1012@0.23.1920.1012" timestamp="1600862973531" />
   </component>
 </project>
