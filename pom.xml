@@ -74,6 +74,7 @@
     <build>
         <plugins>
             <plugin>
+<!--            plugin默认的goal repackage关联maven的package，执行package时默认执行repackage-->
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
