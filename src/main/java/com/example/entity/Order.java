@@ -9,8 +9,10 @@ public class Order {
     private String storeName;
 
     //Spring默认使用Jackson的objectMapper自动处理字符串到date的映射，但只包括常见的pattern，如yyyy-MM-dd（传时的string到bean）
+    //为了返回时的date格式只保留年月日，用@JsonFormat
+
     @JsonFormat(pattern = "yyyy-MM-dd")
-//    @DateTimeFormat(pattern = "yyyy-MM-dd")
+//    @DateTimeFormat(pattern = "yyyy-MM-dd")，无效
     private Date orderTime;
 
     private String userId;
