@@ -1,11 +1,12 @@
 package com.example.entity;
 
+//自动下划线（数据库字段）转驼峰（实体类）
 public class User {
     private String name;
     private String age;
-    private String id;
+    private Integer id;
 
-    public User(String name, String age, String id) {
+    public User(String name, String age, Integer id) {
         this.name = name;
         this.age = age;
         this.id = id;
@@ -27,11 +28,11 @@ public class User {
         this.age = age;
     }
 
-    public String getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 

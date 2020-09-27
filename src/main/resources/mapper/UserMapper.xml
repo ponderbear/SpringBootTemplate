@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace = "com.example.mapper.UserMapper">
+
+<!--    定义基本的返回类型，后续sql操作直接用该id,property 对应实体类的属性，column对应数据库字段-->
+<!--    id和result都为属性值映射，区别在于id是主键-->
+    <resultMap id ="UserResultMap" type = "com.example.entity.User">
+        <id property="id" column = "id"/>
+        <result property = "name" column = "user_name"/>
+        <result property = "age" column = "age"/>
+    </resultMap>
+<!--    <select id = "getAllUser" resultType="com.example.entity.User">-->
+<!--    如果使用resultType作为返回值，则sql语句需要为字段设置实体类中的属性别名，以映射,或者开启下划线与驼峰命名的自动转换，设置中-->
+
+<!--    设置resultMap则是按照设置的映射返回结果-->
+    <select id = "getAllUser" resultMap="UserResultMap">
+        select * from user where user_name = #{name}
+    </select>
+</mapper>
