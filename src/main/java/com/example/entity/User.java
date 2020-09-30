@@ -1,6 +1,5 @@
 package com.example.entity;
 
-//自动下划线（数据库字段）转驼峰（实体类）
 public class User {
     private String name;
     private String age;
@@ -12,7 +11,7 @@ public class User {
         this.id = id;
     }
 
-//    mybatis映射机制，自动创建bean，使用无参构造方法创建
+//    mybatis映射机制，自动创建bean时是使用无参构造方法创建，然后是使用setter方法塞值
     public User(){};
 
     public String getName() {
