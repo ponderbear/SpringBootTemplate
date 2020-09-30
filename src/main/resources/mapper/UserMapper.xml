@@ -16,7 +16,7 @@
 <!--    如果使用resultType作为返回值，则sql语句需要为字段设置实体类中的属性别名，以映射,或者开启下划线与驼峰命名的自动转换，设置中-->
 
 <!--    设置resultMap则是按照设置的映射返回结果-->
-    <select id = "getAllUser" resultMap="UserResultMap">
-        select * from user where user_name = #{name}
+    <select id = "getUserByName" resultMap="UserResultMap">
+        select * from user where user_name = #{userName}
     </select>
 </mapper>

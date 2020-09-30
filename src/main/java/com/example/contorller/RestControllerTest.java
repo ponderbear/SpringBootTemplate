@@ -77,10 +77,10 @@ public class RestControllerTest {
         return order;
     }
 
-    @RequestMapping(value = "/user/{id}", method = RequestMethod.POST)
-    public List<User> getUser(@PathVariable("id") String id){
+    @RequestMapping(value = "/user/{userName}", method = RequestMethod.GET)
+    public List<User> getUser(@PathVariable("userName") String userName){
         log.info("查找用户名称！！");
-        return userOrder.gerUserName(id);
+        return userOrder.getUserByName(userName);
     }
 
     //4、Modle或ModelView：httpxmlRequest方法自带Model对象，注入后，前端再获取

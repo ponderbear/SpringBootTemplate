@@ -12,6 +12,9 @@ public class User {
         this.id = id;
     }
 
+//    mybatis映射机制，自动创建bean，使用无参构造方法创建
+    public User(){};
+
     public String getName() {
         return name;
     }

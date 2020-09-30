@@ -24,9 +24,8 @@ public class UserOrderImpl implements UserOrder {
     }
 
     @Override
-    @ResponseBody
-    public List<User> gerUserName(String userId) {
-        List<User> userList = userMapper.getAllUser();
+    public List<User> getUserByName(String UserName) {
+        List<User> userList = userMapper.getUserByName(UserName);
         return userList;
     }
 }

@@ -8,5 +8,5 @@ public interface UserOrder {
 
     public String getUserOrder(String userId);
 
-    public List<User> gerUserName(String userId);
+    public List<User> getUserByName(String userName);
 }
