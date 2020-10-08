@@ -1,0 +1,13 @@
+package com.example.mapper;
+
+import com.example.entity.Order;
+import org.apache.ibatis.annotations.Param;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
+
+@Component
+public interface UserOrderMapper {
+
+    List<Order> getUserOrder(@Param("user") Integer userId, @Param("order") Integer orderId);
+}

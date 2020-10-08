@@ -6,6 +6,9 @@ import org.springframework.format.annotation.DateTimeFormat;
 import java.util.Date;
 
 public class Order {
+
+    private Integer orderId;
+
     private String storeName;
 
     //Spring默认使用Jackson的objectMapper自动处理字符串到date的映射，但只包括常见的pattern，如yyyy-MM-dd（传时的string到bean）
@@ -19,13 +22,9 @@ public class Order {
 
     private String address;
 
+    private String userName;
 
-    public Order(String storeName, Date orderTime, String userId, String address) {
-        this.storeName = storeName;
-        this.orderTime = orderTime;
-        this.userId = userId;
-        this.address = address;
-    }
+
 
     public String getStoreName() {
         return storeName;
@@ -59,13 +58,40 @@ public class Order {
         this.address = address;
     }
 
+    public Integer getOrderId() {
+        return orderId;
+    }
+
+    public void setOrderId(Integer orderId) {
+        this.orderId = orderId;
+    }
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
+
+    public Order(Integer orderId, String storeName, Date orderTime, String userId, String address, String userName) {
+        this.orderId = orderId;
+        this.storeName = storeName;
+        this.orderTime = orderTime;
+        this.userId = userId;
+        this.address = address;
+        this.userName = userName;
+    }
+
     @Override
     public String toString() {
         return "Order{" +
-                "storeName='" + storeName + '\'' +
+                "orderId=" + orderId +
+                ", storeName='" + storeName + '\'' +
                 ", orderTime=" + orderTime +
                 ", userId='" + userId + '\'' +
                 ", address='" + address + '\'' +
+                ", userName='" + userName + '\'' +
                 '}';
     }
 }

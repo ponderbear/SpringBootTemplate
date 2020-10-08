@@ -2,13 +2,13 @@ package com.example.contorller;
 
 import com.example.entity.Order;
 import com.example.entity.User;
-import com.example.service.UserOrder;
+import com.example.service.UserOrderService;
+import com.example.service.UserService;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.List;
@@ -21,9 +21,12 @@ import java.util.List;
 public class RestControllerTest {
 //    Logger logger = LoggerFactory.getLogger(RestControllerTest.class);
 
-    @Autowired
+    @Resource
 //    若接口的实现类有多个，则需添加名称实现类名称+接口类定义（或者只写实现类定义）；若实现类只有一个，则可以用接口定义，也不用声明实现类名称
-    private UserOrder userOrder;
+    private UserOrderService userOrderService;
+
+    @Autowired
+    private UserService userService;
 
     //1、value和path：在源码层级互为引用，所以是等价的
     //@RequestMapping(value = "/{id}")
@@ -77,15 +80,36 @@ public class RestControllerTest {
         return order;
     }
 
+    @RequestMapping(value = "/user", method = RequestMethod.GET)
+    public Long addUser(@RequestBody User user){
+        Long userKey = userService.addUser(user);
+        return userKey;
+    }
+
     @RequestMapping(value = "/user/{userName}", method = RequestMethod.GET)
     public List<User> getUser(@PathVariable("userName") String userName){
         log.info("查找用户名称！！");
-        return userOrder.getUserByName(userName);
+        return userService.getUserByName(userName);
+    }
+
+    @RequestMapping(value = "/user/{userId}",method = RequestMethod.POST)
+    public Integer deleteUser(@PathVariable("userId") Integer userId){
+        log.info("删除用户");
+        return userService.deleteUser(userId);
     }
 
     //4、Modle或ModelView：httpxmlRequest方法自带Model对象，注入后，前端再获取
 
     //5、JavaBean根据拼接参数解析：参数对应接收对象的属性，则可以自动接收为javaBean
+
+
+    @RequestMapping(value = "/user/{userId}/order/{orderId}",method = RequestMethod.GET)
+    public List<Order> getUserOrder(@PathVariable Integer userId, @PathVariable Integer  orderId ){
+        List<Order> orderList = userOrderService.getUserOrder(userId, orderId);
+        return orderList;
+    }
+
+
 
     @ModelAttribute
     public void firstVisit(){

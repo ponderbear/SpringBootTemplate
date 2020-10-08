@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<!--        注意，where中，此处入参为值，#{}是接口中同名的参数名，若入参数为bean，则是抽取的个别属性名-->
+
+<mapper namespace="com.example.mapper.UserOrderMapper">
+    <select id="getUserOrder" resultType="com.example.entity.Order">
+        select userorder.id orderId,
+            store_name storeName,
+            order_time orderTime,
+            user_address address,
+            user_id userId,
+            userorder.user_name userName
+        from userorder
+        join user
+        on userorder.user_id = user.id
+        where userorder.user_id = #{user}
+        and userorder.id = #{order}
+    </select>
+</mapper>

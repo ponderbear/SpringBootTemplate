@@ -11,7 +11,7 @@ public class User {
         this.id = id;
     }
 
-//    mybatis映射机制，自动创建bean时是使用无参构造方法创建，然后是使用setter方法塞值
+//    mybatis映射机制，自动创建bean时(mapper返回值)是使用无参构造方法创建，然后是使用setter方法塞值
     public User(){};
 
     public String getName() {

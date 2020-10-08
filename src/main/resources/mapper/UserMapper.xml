@@ -2,21 +2,37 @@
 <!DOCTYPE mapper
         PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--1、约束文件：指定mybais中标签的合法性，可用、可识别-->
 
+<!--mapper是根标签，namespace关联了具体的mapper接口，实例化时通过xml来创造对象-->
 <mapper namespace = "com.example.mapper.UserMapper">
 
-<!--    定义基本的返回类型，后续sql操作直接用该id,property 对应实体类的属性，column对应数据库字段-->
+<!--    定义基本的返回类型，后续sql操作直接用该id,property 对应实体类的属性，column对应数据库字段；property最终会统一转成大写，与User对象中的属性进行关联，所以大小写无所谓-->
 <!--    id和result都为属性值映射，区别在于id是主键-->
     <resultMap id ="UserResultMap" type = "com.example.entity.User">
         <id property="id" column = "id"/>
         <result property = "name" column = "user_name"/>
         <result property = "age" column = "age"/>
     </resultMap>
+
 <!--    <select id = "getAllUser" resultType="com.example.entity.User">-->
 <!--    如果使用resultType作为返回值，则sql语句需要为字段设置实体类中的属性别名，以映射；或者开启下划线（数据库字段）转驼峰（实体类）的自动转换-->
-
-<!--    设置resultMap则是按照设置的映射返回结果-->
+<!--    resultMap则是按照设置的映射返回结果-->
     <select id = "getUserByName" resultMap="UserResultMap">
         select * from user where user_name = #{userName}
     </select>
+
+<!--    通过selectKey标签既可以获取有or没有设置自增主键插入后，返回的主键值（若自动生成的属性有多个，则用逗号隔开），若数据库中设置了自动生成，可以直接通过useGeneratKey属性-->
+<!--    若采用数据库自动生成的，则insert标签中，去掉id的colume和propety-->
+<!--    colum对应数据库，property为bean值，order为mysql是在插入后，再获取，而oracle是BEFORE先分配-->
+
+    <insert id = "addUser">
+        insert into user (user_name, age) values (#{name}, #{age})
+--          sql中插入后，自动回填到service中插入时的bean中，直接getId返回即可
+        <selectKey keyColumn = "id" keyProperty = "id" resultType="int" order = "AFTER">SELECT LAST_INSERT_ID()</selectKey>
+    </insert>
+
+    <delete id="deleteUser">
+        delete from user where id = #{id}
+    </delete>
 </mapper>
