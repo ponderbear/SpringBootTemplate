@@ -16,7 +16,7 @@
     </resultMap>
 
 <!--    <select id = "getAllUser" resultType="com.example.entity.User">-->
-<!--    如果使用resultType作为返回值，则sql语句需要为字段设置实体类中的属性别名，以映射；或者开启下划线（数据库字段）转驼峰（实体类）的自动转换-->
+<!--    如果使用resultType作为返回值，若sql中字段和类中字段名称不一样，则sql语句需要为字段设置实体类中的属性别名，以映射(一样则不用)；或者开启下划线（数据库字段）转驼峰（实体类）的自动转换（则不用写别名）-->
 <!--    resultMap则是按照设置的映射返回结果-->
     <select id = "getUserByName" resultMap="UserResultMap">
         select * from user where user_name = #{userName}

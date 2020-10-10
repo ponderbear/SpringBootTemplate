@@ -1,7 +1,6 @@
 package com.example.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -18,7 +17,7 @@ public class Order {
 //    @DateTimeFormat(pattern = "yyyy-MM-dd")，无效
     private Date orderTime;
 
-    private String userId;
+    private Integer userId;
 
     private String address;
 
@@ -42,11 +41,11 @@ public class Order {
         this.orderTime = orderTime;
     }
 
-    public String getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(String userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
     }
 
@@ -74,7 +73,9 @@ public class Order {
         this.userName = userName;
     }
 
-    public Order(Integer orderId, String storeName, Date orderTime, String userId, String address, String userName) {
+    public Order(){};
+
+    public Order(Integer orderId, String storeName, Date orderTime, Integer userId, String address, String userName) {
         this.orderId = orderId;
         this.storeName = storeName;
         this.orderTime = orderTime;

@@ -10,4 +10,8 @@ import java.util.List;
 public interface UserOrderMapper {
 
     List<Order> getUserOrder(@Param("user") Integer userId, @Param("order") Integer orderId);
+
+    List<Order> getUserAllOrder(Order userOrder);
+
+    List<Order> getPartialUserOrder(@Param("userIds")List<String> userIds);
 }

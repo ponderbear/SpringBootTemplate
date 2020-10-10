@@ -8,4 +8,7 @@ public interface UserOrderService {
 
     public List<Order> getUserOrder(Integer userId, Integer orderId);
 
+    List<Order> getUserAllOrder(Integer userId);
+
+    List<Order> getPartialUserOrder(List<String> userIds);
 }

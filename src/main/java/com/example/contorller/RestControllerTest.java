@@ -109,6 +109,16 @@ public class RestControllerTest {
         return orderList;
     }
 
+    @RequestMapping(value = "/user/{userId}/order",method = RequestMethod.GET)
+    public List<Order> getUserAllOrder(@PathVariable("userId") Integer userId,@RequestParam(value = "timeStamp",required = false, defaultValue = "2020" )String timeStamp){
+        List<Order> userOrderList = userOrderService.getUserAllOrder(userId);
+        return userOrderList;
+    }
+
+    @RequestMapping(value = "/userPar", method = RequestMethod.GET)
+    public List<Order> getPartialUserOrder(@RequestBody List<String> userList){
+        return userOrderService.getPartialUserOrder(userList);
+    }
 
 
     @ModelAttribute
