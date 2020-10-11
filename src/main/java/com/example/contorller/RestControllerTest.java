@@ -120,6 +120,11 @@ public class RestControllerTest {
         return userOrderService.getPartialUserOrder(userList);
     }
 
+    @RequestMapping(value = "/associatedUser/{userId}", method = RequestMethod.GET)
+    public User getAssociatedUser(@PathVariable("userId")Integer userId){
+        return userService.getUser(userId);
+    }
+
 
     @ModelAttribute
     public void firstVisit(){

@@ -15,7 +15,7 @@ public interface UserOrderMapper {
     //mybatis不支持方法重载
 //    List<Order> getUserAllOrder(Integer userId);
 
-    List<Order> getUserAssociatedOrder(Integer userId);
+    List<Order> getUserAssociatedOrder(@Param("userId")Integer userId);
 
     List<Order> getPartialUserOrder(@Param("userIds")List<String> userIds);
 }

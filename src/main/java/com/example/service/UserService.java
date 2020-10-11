@@ -9,10 +9,11 @@ public interface UserService {
 
     Long addUser(User user);
 
-    List<UserService> getUser(Long id);
+    User getUser(Integer id);
 
     Integer deleteUser (Integer id);
 
     public List<User> getUserByName(String userName);
+
 
 }

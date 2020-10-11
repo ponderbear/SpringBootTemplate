@@ -22,8 +22,8 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public List<UserService> getUser(Long id) {
-        return null;
+    public User getUser(Integer id) {
+        return userMapper.getUserAscOrderPri(Integer.valueOf(id.intValue()));
     }
 
     @Override

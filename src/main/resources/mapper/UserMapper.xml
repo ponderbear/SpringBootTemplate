@@ -19,7 +19,7 @@
         <id property="id" column="id"/>
         <result property="name" column="user_name"/>
         <result property="age" column="age"/>
-        <association property="userOrder" column="id" select ="com.example.mapper.UserOrderMapper.getUserAssociatedOrder"/>
+        <association property="userOrder" column="id" select ="resources.mapper.UserOrderMapper.getUserAssociatedOrder"/>
     </resultMap>
 
 <!--    <select id = "getAllUser" resultType="com.example.entity.User">-->
@@ -43,7 +43,9 @@
         delete from user where id = #{id}
     </delete>
 
-    <select id = "getUserAscitOrder" resultMap = "UserOrderMap">
-
+    <select id = "getUserAscOrderPri" resultMap = "UserOrderMap">
+        select id,user_name,age
+        from user
+        where id = #{userId}
     </select>
 </mapper>

@@ -66,4 +66,18 @@
             #{userId}
         </foreach>
     </select>
+
+
+    <select id="getUserAssociatedOrder" resultType="com.example.entity.Order">
+        select userorder.id orderId,
+            store_name storeName,
+            order_time orderTime,
+            user_address address,
+            user_id userId,
+            userorder.user_name userName
+        from userorder
+        join user
+        on userorder.user_id = user.id
+        where userorder.user_id = #{userId}
+    </select>
 </mapper>

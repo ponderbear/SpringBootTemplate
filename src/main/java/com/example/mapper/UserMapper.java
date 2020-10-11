@@ -1,6 +1,7 @@
 package com.example.mapper;
 
 import com.example.entity.User;
+import org.apache.ibatis.annotations.Param;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -17,6 +18,8 @@ public interface UserMapper {
     Integer addUser(User user);
 
     Integer deleteUser(Integer userId);
+
+    User getUserAscOrderPri(@Param("userId") Integer userId);
 
 }
 
