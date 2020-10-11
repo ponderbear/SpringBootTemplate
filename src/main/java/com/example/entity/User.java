@@ -1,9 +1,13 @@
 package com.example.entity;
 
+import java.util.List;
+
 public class User {
     private String name;
     private String age;
     private Integer id;
+
+    private List<Order> userOrder;
 
     public User(String name, String age, Integer id) {
         this.name = name;
@@ -36,6 +40,14 @@ public class User {
 
     public void setId(Integer id) {
         this.id = id;
+    }
+
+    public List<Order> getUserOrder() {
+        return userOrder;
+    }
+
+    public void setUserOrder(List<Order> userOrder) {
+        this.userOrder = userOrder;
     }
 
     @Override
