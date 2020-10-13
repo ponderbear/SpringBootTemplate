@@ -32,7 +32,8 @@
 <!--    注意test里可以写两种：1、接口中@Param，2、传入的bean，直接从中抽出值，作为连接的表中的字段，不能放到标签中运算-->
 <!--    otherwise使用 最后的1 = 2 ，直接排除所有记录-->
 <!--    bind同样使用，storename或#{storename}为@Param或bean中，'%'+storename+'%'-->
-    <select id = "getUserAllOrder" resultMap="UserOrder">
+<!--    可通过flushCach开启或关闭一级缓存-->
+    <select id = "getUserAllOrder" flushCache="true" resultMap="UserOrder">
         select userorder.id as id, store_name, order_time, user_address,user_id, userorder.user_name
         from userorder
         join user

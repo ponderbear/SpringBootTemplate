@@ -8,7 +8,6 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="HelloWorld" />
-        <module name="SpringBootTemplate" />
         <module name="Barista" />
       </profile>
     </annotationProcessing>
@@ -17,7 +16,6 @@
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Barista" options="-parameters" />
       <module name="HelloWorld" options="-parameters" />
-      <module name="SpringBootTemplate" options="-parameters" />
     </option>
   </component>
 </project>
