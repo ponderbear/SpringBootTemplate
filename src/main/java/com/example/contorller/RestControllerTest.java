@@ -37,7 +37,6 @@ public class RestControllerTest {
         log.warn("获取订单编号！！！");
         log.info("获取订单编号！！！");
         log.debug("获取订单编号！！！");
-        log.trace("获取订单编号！！！");
         return id;
     }
 
@@ -123,6 +122,11 @@ public class RestControllerTest {
     @RequestMapping(value = "/associatedUser/{userId}", method = RequestMethod.GET)
     public User getAssociatedUser(@PathVariable("userId")Integer userId){
         return userService.getUser(userId);
+    }
+
+    @RequestMapping(value = "/allOrder", method = RequestMethod.GET)
+    public List<Order> getAllOrder(){
+        return userOrderService.getAllOrder();
     }
 
 

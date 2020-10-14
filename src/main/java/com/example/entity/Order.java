@@ -2,9 +2,12 @@ package com.example.entity;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Order {
+public class Order implements Serializable {
+
+    public static final long serialVersionUIO = 33424L;
 
     private Integer orderId;
 
@@ -22,8 +25,6 @@ public class Order {
     private String address;
 
     private String userName;
-
-
 
     public String getStoreName() {
         return storeName;

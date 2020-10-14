@@ -35,7 +35,5 @@ public class DataTest {
         DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");
         String formatTime = localTime.format(dateTimeFormatter);
         System.out.println(formatTime);
-
-
     }
 }

@@ -11,4 +11,6 @@ public interface UserOrderService {
     List<Order> getUserAllOrder(Integer userId);
 
     List<Order> getPartialUserOrder(List<String> userIds);
+
+    List<Order> getAllOrder();
 }
