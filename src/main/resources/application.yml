@@ -1,0 +1,14 @@
+#person:
+#  age: 18
+#  name: wang
+#  maps:
+#    k1: v1
+#    k2: v2
+#
+##  map的行内写法
+##  maps: {k1: v1, k2: k2}
+#  lists:
+#    - john
+#    - jack
+##数组的行内写法
+##  lists: [johnj,jack]
