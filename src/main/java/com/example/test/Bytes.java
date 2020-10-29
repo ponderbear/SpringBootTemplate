@@ -3,7 +3,7 @@ package com.example.test;
 import java.io.UnsupportedEncodingException;
 
 public class Bytes {
-    public static void main(String args[]){
+    public static void main(String args[]) throws UnsupportedEncodingException {
         String a ="中文";
         byte[] pB = new byte[0];
         try {
@@ -34,6 +34,14 @@ public class Bytes {
             e.printStackTrace();
         }
         System.out.println(us);
+
+        String str="券";
+        String str2 = new String(str.getBytes(),"gbk");
+
+
+        System.out.println(new String(str2.getBytes(""),"gbk").toString());
+        System.out.println(str2);
+
 
     }
 }

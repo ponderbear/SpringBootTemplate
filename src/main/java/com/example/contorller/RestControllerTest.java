@@ -69,8 +69,9 @@ public class RestControllerTest {
     }
 
     //4、@RequestBody：通过requestBody将body为json格式的数据解析为javabean（通过jackson）
-    @RequestMapping(value = "/userOrder", method = RequestMethod.POST)
-    public Order addUserOrder(@RequestBody Order order){
+    @RequestMapping(value = "/userOrder/{userOrderId}", method = RequestMethod.POST)
+    public Order addUserOrder(@PathVariable("userOrderId") Integer userOrderId,@RequestBody Order order){
+        log.info("索取"+userOrderId);
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd: hh : mm");
         String formatString = simpleDateFormat.format(date);

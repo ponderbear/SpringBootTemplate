@@ -1,6 +1,7 @@
 package com.example.test;
 
 
+import com.alibaba.fastjson.JSONObject;
 import com.example.entity.People;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonProcessingException;
@@ -52,6 +53,16 @@ public class JacksonMan {
         } catch (JsonProcessingException e) {
             e.printStackTrace();
         }
+
+        JSONObject bodyJson = new JSONObject();
+        bodyJson.put("phone", "phoneNumber");//phoneNumber,18118999628
+        bodyJson.put("method", "itv");
+        bodyJson.put("lanId", "cityCode");//cityCode,8320100
+        bodyJson.put("provinceId", "provinceCode");//provinceCode,8320000
+        bodyJson.put("auth","authJson");
+
+        System.out.println(bodyJson.toJSONString());
+
 
     }
 }
