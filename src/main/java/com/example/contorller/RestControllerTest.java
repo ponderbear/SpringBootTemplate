@@ -22,6 +22,7 @@ public class RestControllerTest {
 //    Logger logger = LoggerFactory.getLogger(RestControllerTest.class);
 
     @Resource
+//    @Resource(name = "haha")
 //    若接口的实现类有多个，则需添加名称实现类名称+接口类定义（或者只写实现类定义）；若实现类只有一个，则可以用接口定义，也不用声明实现类名称
     private UserOrderService userOrderService;
 
@@ -30,6 +31,7 @@ public class RestControllerTest {
 
     //1、value和path：在源码层级互为引用，所以是等价的
     //@RequestMapping(value = "/{id}")
+
 
     @RequestMapping(path = "/{id}")
     public String getCertainOrder(@PathVariable("id") String id) {

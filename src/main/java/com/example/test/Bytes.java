@@ -39,7 +39,7 @@ public class Bytes {
         String str2 = new String(str.getBytes(),"gbk");
 
 
-        System.out.println(new String(str2.getBytes(""),"gbk").toString());
+        System.out.println(new String(str2.getBytes(),"gbk").toString());
         System.out.println(str2);
 
 
