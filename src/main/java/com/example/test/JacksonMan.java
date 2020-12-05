@@ -80,6 +80,8 @@ public class JacksonMan {
 
         System.out.println(bodyJson.toJSONString());
 
+
+
 //       放的是个json格式的string，所以带/，文本需要包含“”，则需要添加转义字符
 
         //2.1 JSON, 是JSONObject和JSONArray的父类，两个子类可以用JSON所有的公共方法，一切转换
@@ -88,6 +90,12 @@ public class JacksonMan {
         String n = "{\"name\":\"john\",\"age\":\"23\",\"id\":\"007\",\"userOrder\":[{\"orderId\":\"my\",\"storeName\":\"oo\"}]}";
         String jsonArrayString = "[{\"studentName\":\"lily\",\"studentAge\":12}," +
                 "{\"studentName\":\"lucy\",\"studentAge\":15}]";
+
+        JSONObject js = new JSONObject();
+        js.put(n,jsonArrayString);
+        System.out.println(js.toString());
+
+        System.out.println(jsonArrayString);
         //指定反序列化类
         People peopleJsonObject = JSON.parseObject(n,People.class);
         //不指定反序列化类
@@ -117,9 +125,16 @@ public class JacksonMan {
 
         System.out.println("----------------------------------");
 
+
+
         //2.3 JSONArray实际时一个List，每个元素都存放JOSN Objcet
         JSONArray jsonArray = JSON.parseArray(jsonArrayString);
+        String tempJb = JSON.toJSONString(jsonArrayString);
+        System.out.println("array转node字符串:" +tempJb);
+//        System.out.println("array转node字符串二次转换:"+JSON.parseObject(tempJb).toJSONString());
         System.out.println("JsonArray的输出String："+jsonArray.toJSONString());
+
+        JSONArray jsonArray1 = new JSONArray();
 
 
         //2.3.1 JsonArray两种遍历方式
