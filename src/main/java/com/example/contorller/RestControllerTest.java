@@ -22,6 +22,7 @@ public class RestControllerTest {
 //    Logger logger = LoggerFactory.getLogger(RestControllerTest.class);
 
     @Resource
+//    @Resource(name = "haha")
 //    若接口的实现类有多个，则需添加名称实现类名称+接口类定义（或者只写实现类定义）；若实现类只有一个，则可以用接口定义，也不用声明实现类名称
     private UserOrderService userOrderService;
 
@@ -31,13 +32,13 @@ public class RestControllerTest {
     //1、value和path：在源码层级互为引用，所以是等价的
     //@RequestMapping(value = "/{id}")
 
+
     @RequestMapping(path = "/{id}")
     public String getCertainOrder(@PathVariable("id") String id) {
         log.error("获取订单编号！！！");
         log.warn("获取订单编号！！！");
         log.info("获取订单编号！！！");
         log.debug("获取订单编号！！！");
-        log.trace("获取订单编号！！！");
         return id;
     }
 
@@ -70,8 +71,9 @@ public class RestControllerTest {
     }
 
     //4、@RequestBody：通过requestBody将body为json格式的数据解析为javabean（通过jackson）
-    @RequestMapping(value = "/userOrder", method = RequestMethod.POST)
-    public Order addUserOrder(@RequestBody Order order){
+    @RequestMapping(value = "/userOrder/{userOrderId}", method = RequestMethod.POST)
+    public Order addUserOrder(@PathVariable("userOrderId") Integer userOrderId,@RequestBody Order order){
+        log.info("索取"+userOrderId);
         Date date = new Date();
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd: hh : mm");
         String formatString = simpleDateFormat.format(date);
@@ -123,6 +125,11 @@ public class RestControllerTest {
     @RequestMapping(value = "/associatedUser/{userId}", method = RequestMethod.GET)
     public User getAssociatedUser(@PathVariable("userId")Integer userId){
         return userService.getUser(userId);
+    }
+
+    @RequestMapping(value = "/allOrder", method = RequestMethod.GET)
+    public List<Order> getAllOrder(){
+        return userOrderService.getAllOrder();
     }
 
 

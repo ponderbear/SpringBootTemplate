@@ -7,8 +7,17 @@
 <!--mapper是根标签，namespace关联了具体的mapper接口，实例化时通过xml来创造对象-->
 <mapper namespace = "com.example.mapper.UserMapper">
 
+<!--    配置mybatis二级缓存-->
+    <cache
+        eviction = "FIFO"
+        flushInterval="606060"
+        size = "128"
+        readOnly = "true"
+    />
+
 <!--    定义基本的返回类型，后续sql操作直接用该id,property 对应实体类的属性，column对应数据库字段；property最终会统一转成大写，与User对象中的属性进行关联，所以大小写无所谓-->
 <!--    id和result都为属性值映射，区别在于id是主键-->
+<!--    association对应的select是接口mapper，collection可已查询一对多，association依然也可以？？？？discriminate根据字段的值做switch添加不同的类型-->
     <resultMap id ="UserResultMap" type = "com.example.entity.User">
         <id property="id" column = "id"/>
         <result property = "name" column = "user_name"/>
@@ -19,7 +28,7 @@
         <id property="id" column="id"/>
         <result property="name" column="user_name"/>
         <result property="age" column="age"/>
-        <association property="userOrder" column="id" select ="resources.mapper.UserOrderMapper.getUserAssociatedOrder"/>
+        <collection property="userOrder" column="id" select ="com.example.mapper.UserOrderMapper.getUserAssociatedOrder"/>
     </resultMap>
 
 <!--    <select id = "getAllUser" resultType="com.example.entity.User">-->

@@ -18,4 +18,6 @@ public interface UserOrderMapper {
     List<Order> getUserAssociatedOrder(@Param("userId")Integer userId);
 
     List<Order> getPartialUserOrder(@Param("userIds")List<String> userIds);
+
+    List<Order> getAllOrder();
 }
