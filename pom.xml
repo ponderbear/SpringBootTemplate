@@ -59,7 +59,8 @@
             </exclusions>
         </dependency>
 
-<!--    引入spring boot maven 插件主要使用repackage，可以在maven的生命周期package中再次使用repackage，将依赖的jar包都带入最后的jar中（fat jar）,只有该jar可执行-->
+<!--    引入spring boot maven 插件主要使用其中的repackage，可以在maven的生命周期package中再次使用repackage，将依赖的jar包都带入最后的jar中（fat jar）,只有该jar可执行-->
+<!--    生命周期是抽象的，实际生命周期的执行就是用插件的执行-->
 <!--    maven中的package和install仅仅是将编译文件打包，然后当如本地仓库中，并不带lib-->
 <!--    https://daydaynews.cc/zh-hans/technology/281233.html-->
 
@@ -83,13 +84,13 @@
             <version>1.1.10</version>
         </dependency>
 
-<!--       数据库连接池替代了jdbc的接口导入-->
+<!--       springboot starter jdbc 包含了连接池、以及jdbc的高级操作（jdbc template），现在注释掉，改成 自定义连接池 + mybatis-->
 <!--        <dependency>-->
 <!--            <groupId>org.springframework.boot</groupId>-->
 <!--            <artifactId>spring-boot-starter-jdbc</artifactId>-->
 <!--        </dependency>-->
 
-<!--        添加mysql的驱动-->
+<!--        添加实现jdcb接口的针对mysql的类，可以进行一般的jdbc操作-->
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
@@ -113,8 +114,6 @@
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-
-
 
     </dependencies>
 
