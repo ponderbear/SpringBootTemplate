@@ -1,0 +1,37 @@
+#person:
+#  age: 18
+#  name: wang
+#  maps:
+#    k1: v1
+#    k2: v2
+#
+##  map的行内写法
+##  maps: {k1: v1, k2: k2}
+#  lists:
+#    - john
+#    - jack
+##数组的行内写法
+##  lists: [johnj,jack]
+
+
+
+#yml中文档块模式,每个文档块相当于单独的一个配置文件
+
+server:
+  port: 8081
+spring:
+  profiles:
+    active: devf
+---
+server:
+    port: 8084
+spring:
+  profiles: devf
+
+---
+server:
+  port: 80805
+spring:
+  profiles: prod
+
+#也可以用命令行 指定启动的profile

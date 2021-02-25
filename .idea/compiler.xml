@@ -9,13 +9,22 @@
         <outputRelativeToContentRoot value="true" />
         <module name="HelloWorld" />
         <module name="Barista" />
+        <module name="vali" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="vali" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="Barista" options="-parameters" />
       <module name="HelloWorld" options="-parameters" />
+<<<<<<< HEAD
+      <module name="SpringBootTemplate" options="-parameters" />
+      <module name="vali" options="-parameters" />
+=======
+>>>>>>> 9a9505c2e62221d223f62f3b31c2eb0123b5dd03
     </option>
   </component>
 </project>
