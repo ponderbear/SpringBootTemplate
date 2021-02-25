@@ -127,7 +127,7 @@ public class JacksonMan {
 
 
 
-        //2.3 JSONArray实际时一个List，每个元素都存放JOSN Objcet
+        //2.3 JSONArray实际是一个List，每个元素都存放JOSN Objcet
         JSONArray jsonArray = JSON.parseArray(jsonArrayString);
         String tempJb = JSON.toJSONString(jsonArrayString);
         System.out.println("array转node字符串:" +tempJb);
@@ -150,8 +150,6 @@ public class JacksonMan {
             System.out.println("jsonArray第二种遍历访问每一个jsonObject："+ jsonObjectTemp.toString());
         }
         System.out.println("----------------------------------");
-
-
 
     }
 }

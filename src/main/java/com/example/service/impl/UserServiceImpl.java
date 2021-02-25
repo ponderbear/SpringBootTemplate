@@ -36,4 +36,9 @@ public class UserServiceImpl implements UserService {
     public Integer deleteUser(Integer id) {
         return userMapper.deleteUser(id);
     }
+
+    @Override
+    public void getUserRelectTest(){
+        System.out.println("通过反射调用代理类，调用目标类的方法，查询的结果");
+    }
 }

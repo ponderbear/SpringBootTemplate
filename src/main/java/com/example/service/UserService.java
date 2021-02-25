@@ -15,5 +15,7 @@ public interface UserService {
 
     public List<User> getUserByName(String userName);
 
+    public void getUserRelectTest();
+
 
 }

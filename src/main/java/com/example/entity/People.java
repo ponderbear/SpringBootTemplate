@@ -1,18 +1,25 @@
 package com.example.entity;
 
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.util.Objects;
 
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class People {
-    private String Name;
+    private String name;
     private String age;
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getAge() {
@@ -31,19 +38,19 @@ public class People {
         if (o == null || getClass() != o.getClass()) return false;
         People people = (People) o;
 //        3、最合理的相等，即两个对象的所有属性都相等
-        return Objects.equals(Name, people.Name) &&
+        return Objects.equals(name, people.name) &&
                 Objects.equals(age, people.age);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(Name, age);
+        return Objects.hash(name, age);
     }
 
     @Override
     public String toString() {
         return "People{" +
-                "Name='" + Name + '\'' +
+                "Name='" + name + '\'' +
                 ", age='" + age + '\'' +
                 '}';
     }
